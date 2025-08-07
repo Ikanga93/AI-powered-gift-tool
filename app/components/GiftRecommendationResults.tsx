@@ -28,11 +28,11 @@ export default function GiftRecommendationResults({
   };
   if (loadingMessage) {
     return (
-      <div className="max-w-4xl mx-auto text-center py-12">
-        <div className="bg-white rounded-2xl shadow-xl p-8">
-          <div className="loading-spinner mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold text-gray-800 mb-2">AI is Working...</h2>
-          <p className="text-gray-600">{loadingMessage}</p>
+      <div className="max-w-4xl mx-auto px-3 sm:px-4">
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-4 sm:p-6 md:p-8 text-center">
+          <div className="animate-spin rounded-full h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 border-b-2 border-purple-500 mx-auto mb-3 sm:mb-4"></div>
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">Finding Perfect Gifts</h2>
+          <p className="text-sm sm:text-base text-gray-600">{loadingMessage}</p>
         </div>
       </div>
     );
@@ -92,36 +92,26 @@ export default function GiftRecommendationResults({
               <div className="flex justify-between items-start mb-4">
                 <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-sm font-bold px-3 py-1 rounded-full">
                   #{index + 1} Match
-                </div>
-                <div className={`px-2 py-1 rounded-full text-xs font-semibold ${getScoreColor(recommendation.score)}`}>
-                  {Math.round(recommendation.score)}% Match
-                </div>
-              </div>
-
-              {/* Gift Info */}
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {recommendation.gift.name}
-                </h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  {recommendation.gift.description}
-                </p>
-                
-                {/* Star Rating */}
-                <div className="flex items-center mb-3">
-                  <div className="flex mr-2">
-                    {getScoreStars(recommendation.score)}
                   </div>
-                  <span className="text-sm text-gray-500">
-                    ({Math.round(recommendation.score)}/100)
-                  </span>
                 </div>
+                <div className="md:w-2/3">
+                  <div className="flex flex-col sm:flex-row items-start justify-between mb-3 sm:mb-4 gap-2 sm:gap-0">
+                    <div>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">{rec.gift.name}</h3>
+                      <p className="text-base sm:text-lg text-purple-600 font-semibold">${rec.gift.price}</p>
+                    </div>
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
+                      <span className="font-semibold text-sm sm:text-base">{Math.round(rec.score)}% Match</span>
+                    </div>
+                  </div>
 
-                {/* Price */}
-                <div className="flex items-center mb-3">
-                  <DollarSign className="w-4 h-4 text-green-600 mr-1" />
-                  <span className="text-2xl font-bold text-green-600">
-                    ${recommendation.gift.price}
+                  {/* Star Rating */}
+                  <div className="flex items-center mb-3">
+                    <div className="flex mr-2">
+                      {getScoreStars(rec.score)}
+                    </div>
+                    <span className="text-sm text-gray-500">
+                      ({Math.round(rec.score)}/100)
                   </span>
                 </div>
 

@@ -5,97 +5,97 @@ export default function Home() {
   return (
     <div className="bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 px-4">
+      <section className="py-12 sm:py-16 md:py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center justify-center p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-6">
-              <Gift className="w-12 h-12 text-white" />
+          <div className="mb-6 sm:mb-8">
+            <div className="inline-flex items-center justify-center p-3 sm:p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4 sm:mb-6">
+              <Gift className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-2">
               <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                 GiftGenius
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
               Discover the perfect gift with our AI-powered recommendation engine. 
               Personalized suggestions based on recipient preferences, interests, and your budget.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
             <Link
               href="/find-gift"
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-lg flex items-center justify-center"
             >
-              <Sparkles className="w-5 h-5 mr-2" />
+              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               Start Finding Gifts
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
             </Link>
             <Link
               href="/about"
-              className="border-2 border-purple-500 text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-purple-500 hover:text-white transition-all flex items-center justify-center"
+              className="border-2 border-purple-500 text-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:bg-purple-500 hover:text-white transition-all flex items-center justify-center"
             >
               Learn More
             </Link>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-purple-600 mb-2">10K+</div>
-              <div className="text-gray-600">Happy Gift Givers</div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-4xl mx-auto px-4">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-1 sm:mb-2">10K+</div>
+              <div className="text-sm sm:text-base text-gray-600">Happy Gift Givers</div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-pink-600 mb-2">95%</div>
-              <div className="text-gray-600">Satisfaction Rate</div>
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-pink-600 mb-1 sm:mb-2">95%</div>
+              <div className="text-sm sm:text-base text-gray-600">Satisfaction Rate</div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-lg">
-              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
-              <div className="text-gray-600">Gift Categories</div>
+            <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1 sm:mb-2">500+</div>
+              <div className="text-sm sm:text-base text-gray-600">Gift Categories</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
               Why Choose GiftGenius?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Our AI-powered platform makes gift-giving effortless and meaningful
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 text-center">
-              <div className="bg-purple-500 rounded-full p-4 w-16 h-16 mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-center">
+              <div className="bg-purple-500 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4">
+                <Zap className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">AI-Powered</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">AI-Powered</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Advanced algorithms analyze preferences to suggest the most thoughtful gifts
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-pink-50 to-blue-50 rounded-2xl p-8 text-center">
-              <div className="bg-pink-500 rounded-full p-4 w-16 h-16 mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
+            <div className="bg-gradient-to-br from-pink-50 to-blue-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-center">
+              <div className="bg-pink-500 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4">
+                <Target className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Personalized</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">Personalized</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Every recommendation is tailored to the recipient's age, interests, and your relationship
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 text-center">
-              <div className="bg-blue-500 rounded-full p-4 w-16 h-16 mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 text-center">
+              <div className="bg-blue-500 rounded-full p-3 sm:p-4 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-3 sm:mb-4">
+                <Clock className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Quick & Easy</h3>
-              <p className="text-gray-600">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">Quick & Easy</h3>
+              <p className="text-sm sm:text-base text-gray-600">
                 Get perfect gift suggestions in under 2 minutes with our simple questionnaire
               </p>
             </div>

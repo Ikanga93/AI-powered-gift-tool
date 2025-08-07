@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { Sparkles } from 'lucide-react';
 import GiftRecommendationResults from '../../components/GiftRecommendationResults';
 import { GiftRecommendationEngine, UserPreferences, RecommendationResult } from '../../utils/giftRecommendationEngine';
 
@@ -74,12 +75,25 @@ export default function ResultsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 py-12 px-4">
-      <GiftRecommendationResults
-        recommendations={recommendations}
-        onReset={handleReset}
-        loadingMessage={isLoading ? loadingMessage : undefined}
-      />
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 py-6 sm:py-8 md:py-12">
+      <div className="max-w-6xl mx-auto px-3 sm:px-4">
+        <div className="text-center mb-6 sm:mb-8">
+          <div className="inline-flex items-center justify-center p-3 sm:p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-3 sm:mb-4">
+            <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
+          </div>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 px-2">
+            Perfect Gift Recommendations
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 px-2">
+            Based on your preferences, here are our top AI-powered suggestions
+          </p>
+        </div>
+        <GiftRecommendationResults
+          recommendations={recommendations}
+          onReset={handleReset}
+          loadingMessage={isLoading ? loadingMessage : undefined}
+        />
+      </div>
     </div>
   );
 }

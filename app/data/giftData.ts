@@ -246,9 +246,9 @@ export const recipientTypeOptions = [
 ];
 
 export const ageGroupOptions = [
-  { value: "child", label: "Child (0-12)" },
-  { value: "teen", label: "Teen (13-17)" },
-  { value: "young-adult", label: "Young Adult (18-30)" },
-  { value: "adult", label: "Adult (31-60)" },
-  { value: "senior", label: "Senior (60+)" }
+  { value: "child", label: "Child (0-12)", description: "Toys, games, educational items" },
+  { value: "teen", label: "Teen (13-17)", description: "Tech, fashion, hobby items" },
+  { value: "young-adult", label: "Young Adult (18-30)", description: "Lifestyle, career, experiences" },
+  { value: "adult", label: "Adult (31-60)", description: "Home, wellness, professional" },
+  { value: "senior", label: "Senior (60+)", description: "Comfort, health, memories" }
 ];

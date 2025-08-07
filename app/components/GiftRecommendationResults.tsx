@@ -94,24 +94,22 @@ export default function GiftRecommendationResults({
                   #{index + 1} Match
                   </div>
                 </div>
-                <div className="md:w-2/3">
-                  <div className="flex flex-col sm:flex-row items-start justify-between mb-3 sm:mb-4 gap-2 sm:gap-0">
-                    <div>
-                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">{rec.gift.name}</h3>
-                      <p className="text-base sm:text-lg text-purple-600 font-semibold">${rec.gift.price}</p>
-                    </div>
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
-                      <span className="font-semibold text-sm sm:text-base">{Math.round(rec.score)}% Match</span>
-                    </div>
+              {/* Gift Info */}
+              <div className="mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  {recommendation.gift.name}
+                </h3>
+                <p className="text-gray-600 text-sm mb-3">
+                  {recommendation.gift.description}
+                </p>
+                
+                {/* Star Rating */}
+                <div className="flex items-center mb-3">
+                  <div className="flex mr-2">
+                    {getScoreStars(recommendation.score)}
                   </div>
-
-                  {/* Star Rating */}
-                  <div className="flex items-center mb-3">
-                    <div className="flex mr-2">
-                      {getScoreStars(rec.score)}
-                    </div>
-                    <span className="text-sm text-gray-500">
-                      ({Math.round(rec.score)}/100)
+                  <span className="text-sm text-gray-500">
+                    ({Math.round(recommendation.score)}/100)
                   </span>
                 </div>
 
